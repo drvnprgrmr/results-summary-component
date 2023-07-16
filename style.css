@@ -2,10 +2,10 @@
     box-sizing: border-box;
 }
 
-
 @font-face {
     font-family: "Hanken";
-    src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf") format("truetype");
+    src: url("assets/fonts/HankenGrotesk-VariableFont_wght.ttf")
+        format("truetype");
 }
 
 body {
@@ -39,22 +39,51 @@ section {
 }
 
 img {
-    margin-right: .7rem;
+    margin-right: 0.7rem;
 }
 
 /* Result section */
 #result {
-    /* background: rgb(103,67,255); */
     text-align: center;
-    background: linear-gradient(180deg, hsl(252, 100%, 67%) 0%, hsl(241, 81%, 54%) 100%);
+    background: linear-gradient(
+        180deg,
+        hsl(252, 100%, 67%) 0%,
+        hsl(241, 81%, 54%) 100%
+    );
     border-radius: 1rem;
-    color: white;
+    padding: 0 1.8rem;
+    color: hsl(241, 100%, 89%);
     flex-basis: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#result-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#score-total {
+    padding: 2rem 3rem;
+    border-radius: 100%;
+    align-self: center;
+    background: linear-gradient(
+        180deg,
+        hsla(256, 72%, 46%, 1) 0%,
+        hsla(241, 72%, 46%, 0) 100%
+    );
 }
 
 #result-score {
     font-size: 4rem;
     font-weight: 800;
+    margin: 0;
+    color: hsl(0, 0%, 100%);
+}
+
+#result-score + p {
     margin: 0;
 }
 
@@ -62,8 +91,8 @@ img {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0;
+    color: hsl(0, 0%, 100%);
 }
-
 
 /* Summary section */
 #summary {
@@ -83,9 +112,9 @@ img {
     display: flex;
     justify-content: space-between;
     font-weight: 600;
-    padding: 0 .7rem;
+    padding: 0 0.7rem;
     margin-bottom: 1rem;
-    border-radius: .3rem;
+    border-radius: 0.3rem;
 }
 
 .category {
@@ -98,12 +127,12 @@ img {
 }
 
 .total {
-    color: hsla(224, 30%, 27%, .5);
+    color: hsla(224, 30%, 27%, 0.5);
 }
 
 /* Unique colors */
 .red {
-    background-color: hsla(0, 100%, 67%, .1);
+    background-color: hsla(0, 100%, 67%, 0.1);
     color: hsl(0, 100%, 67%);
 }
 
@@ -113,12 +142,12 @@ img {
 }
 
 .green {
-    background-color: hsl(166, 100%, 37%, .1);
+    background-color: hsl(166, 100%, 37%, 0.1);
     color: hsl(166, 100%, 37%);
 }
 
 .blue {
-    background-color: hsl(234, 85%, 45%, .1);
+    background-color: hsl(234, 85%, 45%, 0.1);
     color: hsl(234, 85%, 45%);
 }
 
@@ -129,6 +158,14 @@ button {
     padding: 1rem 0;
     width: 100%;
     border-radius: 10rem;
+}
+
+button:active {
+    background: linear-gradient(
+        180deg,
+        hsl(252, 100%, 67%) 0%,
+        hsl(241, 81%, 54%) 100%
+    );
 }
 
 .attribution {
